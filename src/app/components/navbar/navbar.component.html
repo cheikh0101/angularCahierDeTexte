@@ -1,13 +1,20 @@
-<div class="container">
-  <header class="d-flex flex-wrap py-3 mb-1 border-bottom">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      <span class="fs-4">MesCours</span>
-    </a>
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a name="" id="" class="btn btn-primary" [routerLink]="['dashboard']"  role="button">Connexion</a>
-      </li>
-    </ul>
-  </header>
-</div>
+<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MesCours</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
+        </li>
+      </ul>
+      <button [routerLink]="['dashboard']" class="btn btn-primary">
+        Connexion
+      </button>
+    </div>
+  </div>
+</nav>
+

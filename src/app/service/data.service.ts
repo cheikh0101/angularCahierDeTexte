@@ -8,8 +8,50 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getUser() {
+    return this.httpClient.get('https://apicahierdetexte.herokuapp.com/api/user');
+  }
+
+  getEc() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/ec');
+  }
+
+  getUe() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/ue');
+  }
+
+  getSemestre() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/semestre');
+  }
+
+  getSeance() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/seance');
+  }
+
+  //--------------------------------------
+  getSemestres() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/semestres ');
+  }
+
+  getUes() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/ues');
+  }
+
+  getEcs() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/ecs');
+  }
+
+  getSeances() {
+    return this.httpClient.get(' http://10.157.16.180:8000/api/seances');
+  }
+
+
+
+
+
+
   getData() {
-    return this.httpClient.get('http://localhost:8000/api/employees');
+    return this.httpClient.get('http://localhost:8000/api/user');
   }
 
   inserData(data: any) {

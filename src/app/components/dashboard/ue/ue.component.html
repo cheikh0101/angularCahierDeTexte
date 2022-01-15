@@ -17,38 +17,24 @@
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Prénom et Nom</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Téléphone</th>
-                  <th scope="col">Matricule</th>
-                  <th scope="col">Actions</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">Intitulé</th>
+                  <th scope="col" colspan="3">Voir</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>aa</td>
+                <tr *ngFor="let ue of ues">
+                  <th scope="row">{{ue.id}}</th>
+                  <td>{{ue.code}}</td>
+                  <td>{{ue.intitule}}</td>
                   <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-primary">Voir</button>
-                      <button type="button" class="btn btn-warning">Modifier</button>
-                      <button type="button" class="btn btn-danger">Supprimer</button>
-                    </div>
+                    <a name="" id="" class="btn btn-primary" href="#" role="button">Voir</a>
+                  <td>
+                    <a name="" id="" class="btn btn-warning" href="#" role="button">Modifier</a>
                   </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
+                  <td>
+                    <a name="" id="" class="btn btn-danger" href="#" role="button">Supprimer</a>
+                  </td>
                 </tr>
               </tbody>
             </table>

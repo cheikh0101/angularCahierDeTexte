@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/service/data.service';
+import { Ue } from './ue';
 
 @Component({
   selector: 'app-ue',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UeComponent implements OnInit {
 
-  constructor() { }
+  ues: any;
+  ue = new Ue();
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.getUe()
+  }
+
+  getUe(){
+    this.dataService.getUe().subscribe(res => {
+      this.ues = res;
+    });
   }
 
 }
