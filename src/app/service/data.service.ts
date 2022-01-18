@@ -13,60 +13,34 @@ export class DataService {
   }
 
   getEc() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/ec');
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/ec');
   }
 
   getUe() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/ue');
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/ue');
   }
 
   getSemestre() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/semestre');
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/semestre');
   }
 
   getSeance() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/seance');
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/seance');
   }
 
-  //--------------------------------------
   getSemestres() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/semestres ');
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/semestres ');
   }
 
   getUes() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/ues');
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/ues');
   }
 
   getEcs() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/ecs');
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/ecs');
   }
 
   getSeances() {
-    return this.httpClient.get(' http://10.157.16.180:8000/api/seances');
-  }
-
-
-
-
-
-
-  getData() {
-    return this.httpClient.get('http://localhost:8000/api/user');
-  }
-
-  inserData(data: any) {
-    return this.httpClient.post('http://localhost:8000/api/addEmployee', data);
-  }
-
-  updateData(id: any, data: any) {
-    return this.httpClient.put('http://localhost:8000/api/updateEmployee/' + id, data);
-  }
-
-  deleteData(id: any) {
-    return this.httpClient.delete('http://localhost:8000/api/deleteEmployee/' + id);
-  }
-
-  getEmployeeById(id: any) {
-    return this.httpClient.get('http://localhost:8000/api/employee/' + id);
+    return this.httpClient.get(' http://apicahierdetexte.herokuapp.com/api/seances');
   }
 }
